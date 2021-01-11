@@ -12,9 +12,9 @@ void XonoticMultiplayerDialog_fill(entity me)
 	mc = makeXonoticTabController(me.rows - 1);
 	me.TR(me);
 		me.TD(me, 1, 1, e = mc.makeTabButton_T(mc, _("Servers"), makeXonoticServerListTab(),
-			_("Find servers to play on")));
+			_("")));
 		me.TD(me, 1, 1, e = mc.makeTabButton_T(mc, _("Create"), makeXonoticServerCreateTab(),
-			_("Host your own game")));
+			_("")));
 		me.TD(me, 1, 1, e = mc.makeTabButton(mc, _("Media"), makeXonoticMediaTab()));
 		me.TD(me, 1, 1, e = mc.makeTabButton(mc, _("Profile"), makeXonoticProfileTab()));
 

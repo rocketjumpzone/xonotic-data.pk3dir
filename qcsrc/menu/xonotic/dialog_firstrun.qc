@@ -36,7 +36,7 @@ void XonoticFirstRunDialog_fill(entity me)
 	me.TR(me);
 	me.TR(me);
 		me.TDempty(me, 1);
-		me.TD(me, 2, 4, e = makeXonoticTextLabel(0, _("Welcome to Xonotic, please select your language preference and enter your player name to get started.  You can change these options later through the menu system.")));
+		me.TD(me, 1, 6, e = makeXonoticTextLabel(0, ("Choose your name and keep it - name change in Rocket Jump Zone Servers is forbidden. Choose your profile name from rocketjump.zone/players. Clan prefixes allowed.")));
 		e.allowWrap = 1;
 	me.TR(me);
 
@@ -54,7 +54,7 @@ void XonoticFirstRunDialog_fill(entity me)
 			box.forbiddenCharacters = "\r\n\\\"$"; // don't care, isn't getting saved
 			box.maxLength = -127; // negative means encoded length in bytes
 			box.saveImmediately = 0;  // Sorry, can't do this, it spams "name" commands.
-			box.enableClearButton = 0;
+			box.enableClearButton = 1;
 			label.textEntity = box;
 	me.TR(me);
 		me.TD(me, 5, 1.25, e = makeXonoticColorpicker(box));

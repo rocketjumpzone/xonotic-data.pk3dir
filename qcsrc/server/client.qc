@@ -1074,7 +1074,7 @@ string getwelcomemessage(entity this)
 
 	string motd = autocvar_sv_motd;
 	if (motd != "") {
-		s = strcat(s, "\n\n^8MOTD: ^7", strreplace("\\n", "\n", motd));
+		s = strcat(s, "\n\n ^7", strreplace("\\n", "\n", motd));
 	}
 	return s;
 }

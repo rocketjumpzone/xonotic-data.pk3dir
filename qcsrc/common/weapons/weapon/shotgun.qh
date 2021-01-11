@@ -6,7 +6,7 @@ CLASS(Shotgun, Weapon)
 /* impulse   */ ATTRIB(Shotgun, impulse, int, 2);
 /* flags     */ ATTRIB(Shotgun, spawnflags, int, WEP_FLAG_NORMAL | WEP_FLAG_RELOADABLE | WEP_TYPE_HITSCAN | WEP_TYPE_MELEE_SEC | WEP_FLAG_BLEED);
 /* rating    */ ATTRIB(Shotgun, bot_pickupbasevalue, float, 6000);
-/* color     */ ATTRIB(Shotgun, wpcolor, vector, '0.5 0.25 0');
+/* color     */ ATTRIB(Shotgun, wpcolor, vector, '1 1 1');
 /* modelname */ ATTRIB(Shotgun, mdl, string, "shotgun");
 #ifdef GAMEQC
 /* model     */ ATTRIB(Shotgun, m_model, Model, MDL_SHOTGUN_ITEM);
@@ -14,7 +14,7 @@ CLASS(Shotgun, Weapon)
 /* flash eff */ ATTRIB(Shotgun, m_muzzleeffect, entity, EFFECT_SHOTGUN_MUZZLEFLASH);
 #endif
 /* crosshair */ ATTRIB(Shotgun, w_crosshair, string, "gfx/crosshairshotgun");
-/* crosshair */ ATTRIB(Shotgun, w_crosshair_size, float, 0.65);
+/* crosshair */ ATTRIB(Shotgun, w_crosshair_size, float, 0.8);
 /* wepimg    */ ATTRIB(Shotgun, model2, string, "weaponshotgun");
 /* refname   */ ATTRIB(Shotgun, netname, string, "shotgun");
 /* wepname   */ ATTRIB(Shotgun, m_name, string, _("Shotgun"));

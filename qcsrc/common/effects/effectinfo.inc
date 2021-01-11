@@ -8653,30 +8653,6 @@ SUB(arc_lightning) {
 	MY(velocitymultiplier) = 100;
 }
 
-DEF(arc_beam);
-// sparks on beam
-SUB(arc_beam) {
-	MY(airfriction) = -10;
-	MY(alpha_min) = 256;
-	MY(alpha_max) = 256;
-	MY(alpha_fade) = 16384;
-	MY(color_min) = "0xfafad2";
-	MY(color_max) = "0xffffff";
-	MY(originjitter) = '3.0 3.0 3.0';
-	MY(relativeoriginoffset) = '10.0 0.0 0.0';
-	MY(startangle_max) = 360;
-	MY(spin_min) = 360;
-	MY(spin_max) = 1000;
-	MY(stretchfactor) = 1;
-	MY(tex_min) = 71;
-	MY(tex_max) = 74;
-	MY(time_min) = 0.050000;
-	MY(time_max) = 0.050000;
-	MY(trailspacing) = 10;
-	MY(type) = "spark";
-	MY(velocityjitter) = '100.0 100.0 100.0';
-	MY(velocitymultiplier) = 200;
-}
 // sparks on beam (underwater)
 SUB(arc_beam) {
 	MY(alpha_min) = 256;

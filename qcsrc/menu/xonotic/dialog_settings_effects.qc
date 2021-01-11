@@ -38,30 +38,7 @@ void XonoticEffectsSettingsTab_fill(entity me)
 	effectsApplyButton.disableOnClick = true;
 	float n;
 	me.TR(me);
-		me.TD(me, 1, 1, e = makeXonoticTextLabel(0, _("Quality preset:")));
-		n = 5 + 2 * boolean(cvar("developer") > 0);
-		if(cvar("developer") > 0)
-		{
-			me.TD(me, 1, 5 / n, e = makeXonoticCommandButton(ZCTX(_("PRE^OMG!")), '1 0 1', "exec effects-omg.cfg", 0));
-				e.applyButton = effectsApplyButton;
-		}
-		me.TD(me, 1, 5 / n, e = makeXonoticCommandButton(ZCTX(_("PRE^Low")), '0 0 0', "exec effects-low.cfg", 0));
-			e.applyButton = effectsApplyButton;
-		me.TD(me, 1, 5 / n, e = makeXonoticCommandButton(ZCTX(_("PRE^Medium")), '0 0 0', "exec effects-med.cfg", 0));
-			e.applyButton = effectsApplyButton;
-		me.TD(me, 1, 5 / n, e = makeXonoticCommandButton(ZCTX(_("PRE^Normal")), '0 0 0', "exec effects-normal.cfg", 0));
-			e.applyButton = effectsApplyButton;
-		me.TD(me, 1, 5 / n, e = makeXonoticCommandButton(ZCTX(_("PRE^High")), '0 0 0', "exec effects-high.cfg", 0));
-			e.applyButton = effectsApplyButton;
-		me.TD(me, 1, 5 / n, e = makeXonoticCommandButton(ZCTX(_("PRE^Ultra")), '0 0 0', "exec effects-ultra.cfg", 0));
-			e.applyButton = effectsApplyButton;
-		if(cvar("developer") > 0)
-		{
-			me.TD(me, 1, 5 / n, e = makeXonoticCommandButton(ZCTX(_("PRE^Ultimate")), '0.5 0 0', "exec effects-ultimate.cfg", 0));
-				e.applyButton = effectsApplyButton;
-		}
 
-	me.gotoRC(me, 1.25, 0);
 		me.TD(me, 1, 1, e = makeXonoticTextLabel(0, _("Geometry detail:")));
 		me.TD(me, 1, 2, e = makeXonoticTextSlider_T("r_subdivisions_tolerance",
 			_("Change the smoothness of the curves on the map")));
@@ -133,6 +110,7 @@ void XonoticEffectsSettingsTab_fill(entity me)
 				_("Disable textures completely for very slow hardware. This gives a huge performance boost, but looks very ugly.")));
 		}
 	me.TR(me);
+	me.TR(me);
 		me.TD(me, 1, 1, e = makeXonoticCheckBox_T(1, "mod_q3bsp_nolightmaps", _("Use lightmaps"),
 			_("Use high resolution lightmaps, which will look pretty but use up some extra video memory")));
 			e.applyButton = effectsApplyButton;
@@ -188,7 +166,7 @@ void XonoticEffectsSettingsTab_fill(entity me)
 			e.addValue(e, ZCTX(_("DMGFX^All")), "2");
 			e.configureXonoticTextSliderValues(e);
 
-	me.gotoRC(me, 1.25, 3.2); me.setFirstColumn(me, me.currentColumn);
+	me.gotoRC(me, 0, 3.2); me.setFirstColumn(me, me.currentColumn);
 		me.TD(me, 1, 3, e = makeXonoticRadioButton_T(1, "r_coronas", "0", _("No dynamic lighting"),
 			_("Enable corona flares around certain lights")));
 	me.TR(me);

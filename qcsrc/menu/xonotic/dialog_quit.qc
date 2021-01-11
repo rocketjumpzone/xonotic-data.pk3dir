@@ -12,9 +12,9 @@ void XonoticQuitDialog_fill(entity me)
 	me.TR(me);
 	me.TR(me);
 		me.TD(me, 1, 1, e = makeXonoticCommandButton_T(_("Yes"), '1 0 0', "echo ]quit; quit", 0,
-			_("Back to work...")));
+			_("")));
 		me.TD(me, 1, 1, e = makeXonoticButton_T(_("No"), '0 1 0',
-			_("I got some more fragging to do!")));
+			_("")));
 			e.onClick = Dialog_Close;
 			e.onClickEntity = me;
 }
